@@ -77,10 +77,12 @@ def get_players(page) -> list[dict]:
             uv_td = page.locator(f"#player_td_uv_{i}")
             uv = uv_td.inner_text().strip() if uv_td.count() > 0 else "N/A"
 
-            # Form — hämta title-attributet från span inuti tdSpecial
+            # Form — två värden, övre (aktuell) och undre (medel)
             form_td = page.locator(f"#player_td_form_{i}")
-            form_span = form_td.locator("tr:first-child span")
-            form = form_span.get_attribute("title") if form_span.count() > 0 else "N/A"
+            form_current_span = form_td.locator("tr:first-child span")
+            form_average_span = form_td.locator("tr:last-child span")
+            form_current = form_current_span.get_attribute("title") if form_current_span.count() > 0 else "N/A"
+            form_average = form_average_span.get_attribute("title") if form_average_span.count() > 0 else "N/A"
 
             # Kondition
             stat_td = page.locator(f"#player_td_stat_{i}")
@@ -92,10 +94,12 @@ def get_players(page) -> list[dict]:
                 "age":       age,
                 "skill":     skill,
                 "uv":        uv,
-                "form":      form,
+                "form_current": form_current,
+                "form_average": form_average,
                 "condition": condition,
                 "team":      TEAM_NAME,
                 "timestamp": datetime.now().isoformat(),
+                
             })
 
         except Exception as e:
@@ -147,14 +151,14 @@ def run():
         players = get_players(page)
 
         # Tabellhuvud
-        print(f"\n{'Namn':<30} | {'Ålder':<6} | {'Skill':<6} | {'UV':<5} | {'Form':<5} | Kondition")
-        print("-" * 90)
+        print(f"\n{'Namn':<30} | {'Ålder':<6} | {'Skill':<6} | {'UV':<5} | {'Form':<5} | {'MedelForm':<9} | Kondition")
+        print("-" * 100)
 
         for player in players:
             cond_lines = format_condition(player['condition'])
-            print(f"{player['name']:<30} | {player['age']:<6} | {player['skill']:<6} | {player['uv']:<5} | {player['form']:<5} | {cond_lines[0]}")
+            print(f"{player['name']:<30} | {player['age']:<6} | {player['skill']:<6} | {player['uv']:<5} | {player['form_current']:<5} | {player['form_average']:<9} | {cond_lines[0]}")
             for line in cond_lines[1:]:
-                print(f"{'':30} | {'':6} | {'':6} | {'':5} | {'':5} | {line}")
+                print(f"{'':30} | {'':6} | {'':6} | {'':5} | {'':5} | {'':9} | {line}")
 
         print(f"\nTotalt {len(players)} spelare")
         save_snapshot(players, label=label)

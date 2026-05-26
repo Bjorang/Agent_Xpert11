@@ -1,0 +1,10 @@
+Req1 — Chans att öka/minska UV
+UV påverkas av medelform tillsammans med matcherfarenhet under säsongen. UV måste vara högre än 10 för att en spelare ska öka i skicklighet. Exakta procentsatser verkar inte vara publikt dokumenterade — detta är en LLM-fråga där vi kan analysera historisk data vi samlar in och försöka härleda mönster. Flashback
+Req2 — Chans att öka mer än ett steg
+Ingen publik dokumentation hittad. Samma slutsats — kräver datainsamling över flera säsonger och LLM-analys för att hitta mönster.
+Req3 — Jämföra form före/efter match
+Skickligheten förblir i princip oförändrad under en säsong, men formen förändras konstant. Detta är ett rent programmeringsproblem — vi tar snapshot före match, snapshot efter, och beräknar differensen. Ingen LLM behövs. Wikipedia
+Req4 — Automatiska snapshots vid speldagar
+Kräver att vi vet när matcher spelas. Vi kan hämta matchschemat från spelet automatiskt. Lösningen är ett schemalagt script (t.ex. Windows Task Scheduler) — ingen LLM behövs.
+Req5 — Spelarvärdets förändring
+Efter säsongen uppdateras spelaren och skickligheten kan höjas eller sänkas beroende på hur formen varit under säsongen. Transfervärdet finns troligen på spelarsidan. Detta är datainsamling + visualisering — LLM kan hjälpa med analys och rekommendationer.
