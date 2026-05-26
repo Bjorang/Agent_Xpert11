@@ -1,1 +1,18 @@
 .env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+
+# Debug och temporära filer
+debug_players.html
+*.json
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+desktop.ini
