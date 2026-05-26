@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Romeo Davis",
+    "player_id": "p619849071",
+    "age": "21",
+    "skill": "6",
+    "uv": "-6",
+    "form": "5",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.057300"
+  },
+  {
+    "name": "Ivan Lindqvist",
+    "player_id": "p619774968",
+    "age": "18",
+    "skill": "7",
+    "uv": "+3",
+    "form": "11",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.094685"
+  },
+  {
+    "name": "Ivan Kutcher",
+    "player_id": "p619747787",
+    "age": "33",
+    "skill": "10",
+    "uv": "-3",
+    "form": "8",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.129736"
+  },
+  {
+    "name": "Anton Llorens",
+    "player_id": "p619833905",
+    "age": "33",
+    "skill": "15",
+    "uv": "-3",
+    "form": "15",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.164018"
+  },
+  {
+    "name": "Emile Bahoken",
+    "player_id": "p619688935",
+    "age": "22",
+    "skill": "9",
+    "uv": "+4",
+    "form": "18",
+    "condition": "Spelaren är frisk och spelklar, men har 2 gula kort",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.200245"
+  },
+  {
+    "name": "Aimeus Verstraeten",
+    "player_id": "p619689036",
+    "age": "22",
+    "skill": "8",
+    "uv": "+6",
+    "form": "18",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.233726"
+  },
+  {
+    "name": "Thomas Bond",
+    "player_id": "p619819158",
+    "age": "20",
+    "skill": "6",
+    "uv": "+5",
+    "form": "17",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.262880"
+  },
+  {
+    "name": "José-María Heredia",
+    "player_id": "p619819016",
+    "age": "18",
+    "skill": "4",
+    "uv": "+7",
+    "form": "19",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.296463"
+  },
+  {
+    "name": "Hermann Israel",
+    "player_id": "p619781773",
+    "age": "34",
+    "skill": "13",
+    "uv": "-2",
+    "form": "14",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.329520"
+  },
+  {
+    "name": "Fausto Giandebiaggi",
+    "player_id": "p619819490",
+    "age": "33",
+    "skill": "11",
+    "uv": "-4",
+    "form": "9",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.365569"
+  },
+  {
+    "name": "Atsuto Murakami",
+    "player_id": "p619823476",
+    "age": "33",
+    "skill": "14",
+    "uv": "-4",
+    "form": "12",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.400312"
+  },
+  {
+    "name": "Viriato de Lemos",
+    "player_id": "p619740286",
+    "age": "30",
+    "skill": "12",
+    "uv": "-4",
+    "form": "7",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.435050"
+  },
+  {
+    "name": "Archibald Lawrence",
+    "player_id": "p619690369",
+    "age": "21",
+    "skill": "7",
+    "uv": "+6",
+    "form": "15",
+    "condition": "Halvskadad, men helt återställd 2026-05-28 00:00",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.469743"
+  },
+  {
+    "name": "Dwayne Worrall",
+    "player_id": "p619728416",
+    "age": "20",
+    "skill": "8",
+    "uv": "+3",
+    "form": "15",
+    "condition": "Avstängd nästa tävlingsmatch.",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.504477"
+  },
+  {
+    "name": "Vincent Savage",
+    "player_id": "p619796434",
+    "age": "32",
+    "skill": "10",
+    "uv": "-4",
+    "form": "12",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.539532"
+  },
+  {
+    "name": "Kittichai Rattanapaibooncharoen",
+    "player_id": "p619834310",
+    "age": "31",
+    "skill": "12",
+    "uv": "-2",
+    "form": "15",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T12:29:30.578005"
+  }
+]

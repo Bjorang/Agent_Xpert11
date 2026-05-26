@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Viriato de Lemos",
+    "age": "30",
+    "skill": "12",
+    "form_before": 7,
+    "form_after": 7,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "-4"
+  },
+  {
+    "name": "Anton Llorens",
+    "age": "33",
+    "skill": "15",
+    "form_before": 15,
+    "form_after": 15,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "-3"
+  },
+  {
+    "name": "Ivan Lindqvist",
+    "age": "18",
+    "skill": "7",
+    "form_before": 11,
+    "form_after": 11,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "+3"
+  },
+  {
+    "name": "Hermann Israel",
+    "age": "34",
+    "skill": "13",
+    "form_before": 14,
+    "form_after": 14,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "-2"
+  },
+  {
+    "name": "José-María Heredia",
+    "age": "18",
+    "skill": "4",
+    "form_before": 19,
+    "form_after": 19,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "+7"
+  },
+  {
+    "name": "Aimeus Verstraeten",
+    "age": "22",
+    "skill": "8",
+    "form_before": 18,
+    "form_after": 18,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "+6"
+  },
+  {
+    "name": "Archibald Lawrence",
+    "age": "21",
+    "skill": "7",
+    "form_before": 15,
+    "form_after": 15,
+    "form_diff": 0,
+    "condition_before": "Halvskadad, men helt återställd 2026-05-28 00:00",
+    "condition_after": "Halvskadad, men helt återställd 2026-05-28 00:00",
+    "uv": "+6"
+  },
+  {
+    "name": "Dwayne Worrall",
+    "age": "20",
+    "skill": "8",
+    "form_before": 15,
+    "form_after": 15,
+    "form_diff": 0,
+    "condition_before": "Avstängd nästa tävlingsmatch.",
+    "condition_after": "Avstängd nästa tävlingsmatch.",
+    "uv": "+3"
+  },
+  {
+    "name": "Vincent Savage",
+    "age": "32",
+    "skill": "10",
+    "form_before": 12,
+    "form_after": 12,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "-4"
+  },
+  {
+    "name": "Ivan Kutcher",
+    "age": "33",
+    "skill": "10",
+    "form_before": 8,
+    "form_after": 8,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "-3"
+  },
+  {
+    "name": "Romeo Davis",
+    "age": "21",
+    "skill": "6",
+    "form_before": 5,
+    "form_after": 5,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "-6"
+  },
+  {
+    "name": "Thomas Bond",
+    "age": "20",
+    "skill": "6",
+    "form_before": 17,
+    "form_after": 17,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "+5"
+  },
+  {
+    "name": "Kittichai Rattanapaibooncharoen",
+    "age": "31",
+    "skill": "12",
+    "form_before": 15,
+    "form_after": 15,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "-2"
+  },
+  {
+    "name": "Fausto Giandebiaggi",
+    "age": "33",
+    "skill": "11",
+    "form_before": 9,
+    "form_after": 9,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "-4"
+  },
+  {
+    "name": "Emile Bahoken",
+    "age": "22",
+    "skill": "9",
+    "form_before": 18,
+    "form_after": 18,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar, men har 2 gula kort",
+    "condition_after": "Spelaren är frisk och spelklar, men har 2 gula kort",
+    "uv": "+4"
+  },
+  {
+    "name": "Atsuto Murakami",
+    "age": "33",
+    "skill": "14",
+    "form_before": 12,
+    "form_after": 12,
+    "form_diff": 0,
+    "condition_before": "Spelaren är frisk och spelklar",
+    "condition_after": "Spelaren är frisk och spelklar",
+    "uv": "-4"
+  }
+]

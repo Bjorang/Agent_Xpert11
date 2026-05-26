@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Romeo Davis",
+    "player_id": "p619849071",
+    "skill": "7",
+    "uv": "+3",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.386995"
+  },
+  {
+    "name": "Ivan Lindqvist",
+    "player_id": "p619774968",
+    "skill": "10",
+    "uv": "-3",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.415373"
+  },
+  {
+    "name": "Ivan Kutcher",
+    "player_id": "p619747787",
+    "skill": "15",
+    "uv": "-3",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.446039"
+  },
+  {
+    "name": "Anton Llorens",
+    "player_id": "p619833905",
+    "skill": "9",
+    "uv": "+4",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar, men har 2 gula kort",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.478062"
+  },
+  {
+    "name": "Emile Bahoken",
+    "player_id": "p619688935",
+    "skill": "8",
+    "uv": "+6",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.508838"
+  },
+  {
+    "name": "Aimeus Verstraeten",
+    "player_id": "p619689036",
+    "skill": "6",
+    "uv": "+5",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.540481"
+  },
+  {
+    "name": "Thomas Bond",
+    "player_id": "p619819158",
+    "skill": "4",
+    "uv": "+7",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.568352"
+  },
+  {
+    "name": "José-María Heredia",
+    "player_id": "p619819016",
+    "skill": "13",
+    "uv": "-2",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.598826"
+  },
+  {
+    "name": "Hermann Israel",
+    "player_id": "p619781773",
+    "skill": "11",
+    "uv": "-4",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.626586"
+  },
+  {
+    "name": "Fausto Giandebiaggi",
+    "player_id": "p619819490",
+    "skill": "14",
+    "uv": "-4",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.654362"
+  },
+  {
+    "name": "Atsuto Murakami",
+    "player_id": "p619823476",
+    "skill": "12",
+    "uv": "-4",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.682147"
+  },
+  {
+    "name": "Viriato de Lemos",
+    "player_id": "p619740286",
+    "skill": "7",
+    "uv": "+6",
+    "form": "N/A",
+    "condition": "Halvskadad, men helt återställd 2026-05-28 00:00",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.709908"
+  },
+  {
+    "name": "Archibald Lawrence",
+    "player_id": "p619690369",
+    "skill": "8",
+    "uv": "+3",
+    "form": "N/A",
+    "condition": "Avstängd nästa tävlingsmatch.",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.742195"
+  },
+  {
+    "name": "Dwayne Worrall",
+    "player_id": "p619728416",
+    "skill": "10",
+    "uv": "-4",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.772467"
+  },
+  {
+    "name": "Vincent Savage",
+    "player_id": "p619796434",
+    "skill": "12",
+    "uv": "-2",
+    "form": "N/A",
+    "condition": "Spelaren är frisk och spelklar",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.800229"
+  },
+  {
+    "name": "Kittichai Rattanapaibooncharoen",
+    "player_id": "p619834310",
+    "skill": "N/A",
+    "uv": "N/A",
+    "form": "N/A",
+    "condition": "N/A",
+    "team": "Odensala Döders",
+    "timestamp": "2026-05-26T11:58:33.821080"
+  }
+]

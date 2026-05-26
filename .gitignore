@@ -8,7 +8,16 @@ venv/
 
 # Debug och temporära filer
 debug_players.html
-*.json
+*_fore_match_*.html
+*_efter_match_*.html
+*_rapport_*.html
+*_diff_*.html
+
+# JSON snapshots
+*_fore_match_*.json
+*_efter_match_*.json
+*_snapshot_*.json
+*_diff_*.json
 
 # VS Code
 .vscode/

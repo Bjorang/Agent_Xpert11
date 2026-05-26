@@ -130,18 +130,20 @@ def format_condition(text: str, width: int = 35) -> list[str]:
 
 
 def run():
+    label_map = {"f": "fore", "e": "efter"}
+    label = input("Är detta en snapshot FÖRE eller EFTER match? (f/e): ").strip().lower()
+    if label not in label_map:
+        print("⚠️ Ogiltigt val, använder 'snapshot' som standard")
+        label = "snapshot"
+    else:
+        label = f"odensala_{label_map[label]}_match"
+
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
 
         login(page)
-        
-        # Debug Kittichai och ålder
-        print("DEBUG - player_td_uv_16:", page.locator("#player_td_uv_16").count())
-        print("DEBUG - player_td_stat_16:", page.locator("#player_td_stat_16").count())
-        print("DEBUG - player_td_uv_15:", page.locator("#player_td_uv_15").count())
-        print("DEBUG - player_td_age_1:", page.locator("#player_td_age_1").count())
-
         players = get_players(page)
 
         # Tabellhuvud
@@ -155,7 +157,7 @@ def run():
                 print(f"{'':30} | {'':6} | {'':6} | {'':5} | {'':5} | {line}")
 
         print(f"\nTotalt {len(players)} spelare")
-        save_snapshot(players, label="odensala_doeders")
+        save_snapshot(players, label=label)
         browser.close()
 
 if __name__ == "__main__":
