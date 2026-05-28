@@ -8,3 +8,5 @@ Req4 — Automatiska snapshots vid speldagar
 Kräver att vi vet när matcher spelas. Vi kan hämta matchschemat från spelet automatiskt. Lösningen är ett schemalagt script (t.ex. Windows Task Scheduler) — ingen LLM behövs.
 Req5 — Spelarvärdets förändring
 Efter säsongen uppdateras spelaren och skickligheten kan höjas eller sänkas beroende på hur formen varit under säsongen. Transfervärdet finns troligen på spelarsidan. Detta är datainsamling + visualisering — LLM kan hjälpa med analys och rekommendationer.
+Req 6: notera skillnaderna på grundformeen 
+Req7: Ta bort UV Före då UV är samma sak

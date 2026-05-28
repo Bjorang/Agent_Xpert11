@@ -1,2 +1,7 @@
 playwright
 python-dotenv
+
+
+# Kommandon
+Compare - python compare.py odensala_fore_match_DATUM.json odensala_efter_match_DATUM.json
+Starta datainhämtning - python tools.py
