@@ -26,7 +26,7 @@ def compare_snapshots(before: list[dict], after: list[dict]) -> list[dict]:
         b = before_map.get(pid)
         a = after_map.get(pid)
         
-        # Hantera om spelaren är helt ny
+       # Hantera om spelaren är helt ny
         if not b:
             diffs.append({
                 "name": a["name"], 
@@ -34,7 +34,8 @@ def compare_snapshots(before: list[dict], after: list[dict]) -> list[dict]:
                 "skill": a.get("skill", "-"),
                 "uv": a.get("uv", "-"),
                 "change": "NY SPELARE", 
-                "uv_before": "-", "uv_after": a.get("uv", "-"), "uv_diff": "-",
+                "uv_after": a.get("uv", "-"), 
+                "uv_diff": "-",
                 "form_current_before": "-", "form_current_after": a["form_current"], "form_current_diff": "-", 
                 "form_average_before": "-", "form_average_after": a["form_average"], "form_average_diff": "-",
                 "condition_before": "-", "condition_after": a["condition"]
@@ -49,17 +50,17 @@ def compare_snapshots(before: list[dict], after: list[dict]) -> list[dict]:
                 "skill": b.get("skill", "-"),
                 "uv": b.get("uv", "-"),
                 "change": "BORTA", 
-                "uv_before": b.get("uv", "-"), "uv_after": "-", "uv_diff": "-",
+                "uv_after": "-", 
+                "uv_diff": "-",
                 "form_current_before": b["form_current"], "form_current_after": "-", "form_current_diff": "-", 
                 "form_average_before": b["form_average"], "form_average_after": "-", "form_average_diff": "-",
                 "condition_before": b["condition"], "condition_after": "-"
             })
             continue
 
-        # Beräkna UV (Flyttad hit in i loopen där 'a' och 'b' faktiskt existerar!)
-        uv_before = parse_uv(b.get("uv"))
+        # Beräkna UV
         uv_after  = parse_uv(a.get("uv"))
-        uv_diff   = uv_after - uv_before
+        uv_diff   = uv_after - parse_uv(b.get("uv"))
 
         # Beräkna nuvarande form
         form_current_before = int(b["form_current"]) if b["form_current"] != "N/A" else 0
@@ -76,7 +77,7 @@ def compare_snapshots(before: list[dict], after: list[dict]) -> list[dict]:
             "age":                  b["age"],
             "skill":                b["skill"],
             "uv":                   a["uv"],
-            "uv_before":            uv_before,
+            #"uv_before":            uv_before,
             "uv_after":             uv_after,
             "uv_diff":              uv_diff,
             "form_current_before":  form_current_before,
@@ -117,14 +118,13 @@ def generate_html_report(diffs: list[dict], label: str = "rapport"):
         cond_changed = p["condition_before"] != p["condition_after"]
         cond_style = "background-color:#fff3cd;" if cond_changed else ""
 
-        # Här är alla TD-taggar återställda och ligger i exakt samma ordning som TH-taggarna nedan
+       # Här matchar vi exakt mot rubrikerna nedan
         rows += f"""
         <tr style="{cond_style}">
             <td>{p['name']}</td>
             <td>{p.get('age', '-')}</td>
             <td>{p.get('skill', '-')}</td>
             <td>{p.get('uv', '-')}</td>
-            <td>{p.get('uv_before', '-')}</td>
             <td>{p.get('uv_after', '-')}</td>
             <td>{diff_cell(p.get('uv_diff', '-'))}</td>
             <td>{p.get('form_current_before', '-')}</td>
@@ -156,7 +156,7 @@ def generate_html_report(diffs: list[dict], label: str = "rapport"):
     <table>
         <tr>
             <th>Namn</th><th>Ålder</th><th>Skill</th><th>UV</th>
-            <th>UV före</th><th>UV efter</th><th>UV diff</th>
+            <th>UV efter</th><th>UV diff</th>
             <th>Form före</th><th>Form efter</th><th>Form diff</th>
             <th>Medel före</th><th>Medel efter</th><th>Medel diff</th>
             <th>Kondition före</th><th>Kondition efter</th>
