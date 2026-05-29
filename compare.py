@@ -77,7 +77,7 @@ def compare_snapshots(before: list[dict], after: list[dict]) -> list[dict]:
             "age":                  b["age"],
             "skill":                b["skill"],
             "uv":                   a["uv"],
-            #"uv_before":            uv_before,
+            "uv_before": parse_uv(b.get("uv")),
             "uv_after":             uv_after,
             "uv_diff":              uv_diff,
             "form_current_before":  form_current_before,
@@ -124,7 +124,7 @@ def generate_html_report(diffs: list[dict], label: str = "rapport"):
             <td>{p['name']}</td>
             <td>{p.get('age', '-')}</td>
             <td>{p.get('skill', '-')}</td>
-            <td>{p.get('uv', '-')}</td>
+           <td>{p.get('uv_before', '-')}</td>
             <td>{p.get('uv_after', '-')}</td>
             <td>{diff_cell(p.get('uv_diff', '-'))}</td>
             <td>{p.get('form_current_before', '-')}</td>
@@ -155,8 +155,8 @@ def generate_html_report(diffs: list[dict], label: str = "rapport"):
     <h1>Formrapport — {datetime.now().strftime('%Y-%m-%d %H:%M')}</h1>
     <table>
         <tr>
-            <th>Namn</th><th>Ålder</th><th>Skill</th><th>UV</th>
-            <th>UV efter</th><th>UV diff</th>
+            <th>Namn</th><th>Ålder</th><th>Skill</th>
+            <th>UV före</th><th>UV efter</th><th>UV diff</th>
             <th>Form före</th><th>Form efter</th><th>Form diff</th>
             <th>Medel före</th><th>Medel efter</th><th>Medel diff</th>
             <th>Kondition före</th><th>Kondition efter</th>
@@ -174,14 +174,40 @@ def generate_html_report(diffs: list[dict], label: str = "rapport"):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Användning: python compare.py <before.json> <after.json>")
+    from pathlib import Path
+
+    # Hitta alla snapshot-filer
+    fore_files  = sorted(Path(".").glob("*_fore_match_*.json"))
+    efter_files = sorted(Path(".").glob("*_efter_match_*.json"))
+
+    if not fore_files or not efter_files:
+        print("⚠️ Inga snapshot-filer hittades!")
         sys.exit(1)
 
-    # OBS: Se till att dessa funktioner (load_snapshot, compare_snapshots etc.) 
-    # är importerade eller definierade i din fil.
-    before = load_snapshot(sys.argv[1])
-    after  = load_snapshot(sys.argv[2])
+    # Visa FÖRE-filer
+    print("\nTillgängliga FÖRE-filer:")
+    for i, f in enumerate(fore_files, start=1):
+        print(f"  {i}. {f.name}")
+    fore_default = len(fore_files)
+    fore_val = input(f"Välj FÖRE-fil (1-{len(fore_files)}) [standard: {fore_default}]: ").strip()
+    fore_index = int(fore_val) - 1 if fore_val else fore_default - 1
+    fore_file = fore_files[fore_index]
+
+    # Visa EFTER-filer
+    print("\nTillgängliga EFTER-filer:")
+    for i, f in enumerate(efter_files, start=1):
+        print(f"  {i}. {f.name}")
+    efter_default = len(efter_files)
+    efter_val = input(f"Välj EFTER-fil (1-{len(efter_files)}) [standard: {efter_default}]: ").strip()
+    efter_index = int(efter_val) - 1 if efter_val else efter_default - 1
+    efter_file = efter_files[efter_index]
+
+    print(f"\n📂 Jämför:")
+    print(f"   FÖRE:  {fore_file.name}")
+    print(f"   EFTER: {efter_file.name}")
+
+    before = load_snapshot(str(fore_file))
+    after  = load_snapshot(str(efter_file))
     diffs  = compare_snapshots(before, after)
 
     save_diff_json(diffs)

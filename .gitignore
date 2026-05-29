@@ -12,12 +12,14 @@ debug_players.html
 *_efter_match_*.html
 *_rapport_*.html
 *_diff_*.html
+rapport_*.html
 
 # JSON snapshots
 *_fore_match_*.json
 *_efter_match_*.json
 *_snapshot_*.json
 *_diff_*.json
+diff_*.json
 
 # VS Code
 .vscode/
