@@ -15,23 +15,38 @@ LOGIN_URL   = f"{BASE_URL}/default.aspx"
 TEAM_URL    = "https://www.xperteleven.com/players.aspx?dh=2&TeamID=1952957&Boost=1"
 TEAM_NAME   = "Odensala Döders"
 
+TEAMS = {
+    "1": {
+        "name": "Odensala Döders",
+        "team_id": "1952957",
+        "url": "https://www.xperteleven.com/players.aspx?dh=2&TeamID=1952957&Boost=1",
+        "lobby_id": "#ctl00_cphMain_gvFriendsTeam_ctl02_hlFriendTeam",
+        "label": "odensala",
+    },
+    "2": {
+        "name": "Long Street FC",
+        "team_id": "1953833",
+        "url": "https://www.xperteleven.com/players.aspx?dh=2&TeamID=1953833&Boost=1",
+        "lobby_id": "#ctl00_cphMain_gvXpertTeams_ctl02_hlXpertTeam",
+        "label": "longstreet",
+    },
+}
 
-def login(page):
-    """Loggar in på Xperteleven."""
+def login(page, team: dict):
+    """Loggar in och navigerar till valt lags spelartrupp."""
     page.goto(LOGIN_URL)
     page.wait_for_load_state("networkidle")
 
     page.locator("#ctl00_cphMain_FrontControl_lwLogin_tbUsername").fill(USERNAME)
     page.locator("#ctl00_cphMain_FrontControl_lwLogin_tbPassword").fill(PASSWORD)
     page.locator("#ctl00_cphMain_FrontControl_lwLogin_btnLogin").click()
-
     page.wait_for_load_state("networkidle")
     print("✅ Inloggad!")
 
- # Välj Odensala Döders på landningssidan
-    page.locator("#ctl00_cphMain_gvFriendsTeam_ctl02_hlFriendTeam").click()
+    # Välj lag på landningssidan
+    page.locator(team["lobby_id"]).click()
     page.wait_for_load_state("networkidle")
-    print("✅ Valde Odensala Döders!")
+    print(f"✅ Valde {team['name']}!")
 
     # Klicka på Spelartrupp i menyn
     page.locator("#ctl00_lblTeamMenuLinksSquad").click()
@@ -134,20 +149,30 @@ def format_condition(text: str, width: int = 35) -> list[str]:
 
 
 def run():
+    # Välj lag
+    print("\nVälj lag:")
+    for key, team in TEAMS.items():
+        print(f"  {key}. {team['name']}")
+    lag_val = input("Välj lag (1/2): ").strip()
+    if lag_val not in TEAMS:
+        print("⚠️ Ogiltigt val, använder Odensala Döders som standard")
+        lag_val = "1"
+    team = TEAMS[lag_val]
+
+    # Välj före/efter
     label_map = {"f": "fore", "e": "efter"}
     label = input("Är detta en snapshot FÖRE eller EFTER match? (f/e): ").strip().lower()
     if label not in label_map:
         print("⚠️ Ogiltigt val, använder 'snapshot' som standard")
         label = "snapshot"
     else:
-        label = f"odensala_{label_map[label]}_match"
-
+        label = f"{team['label']}_{label_map[label]}_match"
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
 
-        login(page)
+        login(page, team)
         players = get_players(page)
 
         # Tabellhuvud
@@ -160,7 +185,7 @@ def run():
             for line in cond_lines[1:]:
                 print(f"{'':30} | {'':6} | {'':6} | {'':5} | {'':5} | {'':9} | {line}")
 
-        print(f"\nTotalt {len(players)} spelare")
+        print(f"\nTotalt {len(players)} spelare — {team['name']}")
         save_snapshot(players, label=label)
         browser.close()
 
